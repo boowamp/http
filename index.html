@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>PLAY ME</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+    $( document ).ready(function() {
+    var ctrlVideo = document.getElementById("video"); 
+    
+    $('button').click(function(){
+    if ($('button').hasClass("active")){
+    
+    ctrlVideo.play();
+    
+    $('button').html("RENT A GAY");
+    $('button').toggleClass("inactive");
+    } else {
+    
+    ctrlVideo.pause();
+    
+    $('button').html("PLAY ME");
+    $('button').toggleClass("active");
+    }
+    });
+    
+    });
+    </script>
+
+</head>
+<body>
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <button class="active">PLAY</button>
+            <video id="video" preload="auto" loop>
+            <source src="video.mp4">
+            </video>
+		</div>
+    </div>
+</section>
+	</body>
+</html>
